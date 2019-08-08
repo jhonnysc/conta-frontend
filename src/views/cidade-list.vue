@@ -1,6 +1,9 @@
 <template>
   <div>
     <h1>Consulta de cidades</h1>
+    <router-link to="/cidade-form">
+        <button>Nova Cidade</button>
+    </router-link>
     <table>
       <tr>
         <th>Nome</th>

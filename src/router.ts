@@ -4,6 +4,7 @@ import Home from '@/views/home.vue';
 import CidadeList from '@/views/cidade-list.vue';
 import AgenciaList from '@/views/agencia-list.vue';
 import ClienteList from '@/views/cliente-list.vue';
+import CidadeForm from '@/views/cidade-form.vue';
 
 Vue.use(Router);
 
@@ -14,6 +15,10 @@ export default new Router({
     {
       path: '/',
       component: Home
+    },
+    {
+      path: '/cidade-form',
+      component: CidadeForm
     },
     {
       path: '/cidades',
@@ -31,5 +36,6 @@ export default new Router({
       path: '*',
       redirect: '/'
     }
+    
   ],
 });
