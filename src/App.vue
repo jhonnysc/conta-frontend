@@ -1,37 +1,29 @@
 <template>
   <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
+    <div>
+      <v-card color="grey lighten-4" flat height="200px">
+        <v-toolbar dark>
+          <router-link to="/home" tag="button">
+            <v-toolbar-title class="link">Conta</v-toolbar-title>
+          </router-link>
+          <v-spacer></v-spacer>
+          <v-toolbar-items>
+            <router-link to="/cidades" tag="button">
+              <v-btn class="link" text>Cidades</v-btn>
+            </router-link>
+            <router-link to="/agencias" tag="button">
+              <v-btn class="link" text>Agencias</v-btn>
+            </router-link>
+            <router-link to="/clientes" tag="button">
+              <v-btn class="link" text>Clientes</v-btn>
+            </router-link>
+          </v-toolbar-items>
+        </v-toolbar>
+      </v-card>
+    </div>
+    <router-view></router-view>
   </v-app>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
-
-export default Vue.extend({
-  name: 'App',
-  components: {
-    HelloWorld,
-  },
-  data: () => ({
-    //
-  }),
-});
-</script>
+<style scoped>
+</style>
